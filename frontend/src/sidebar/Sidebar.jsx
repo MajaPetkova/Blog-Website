@@ -6,7 +6,7 @@ const Sidebar = () => {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://media.istockphoto.com/id/1179997588/de/foto/du-brauchst-niemanden-der-dir-blumen-kauft.jpg?s=612x612&w=is&k=20&c=nHKJW1u_spMCzbS2yPQv6zAwVoAHZq4IT1jDAfUFV2Y="
+          src="https://images.pexels.com/photos/7691238/pexels-photo-7691238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
         />
         <p>
@@ -26,12 +26,14 @@ const Sidebar = () => {
           <li className="sidebarListItem">Tech</li>
         </ul>
       </div>
-      <span className="sidebarItem">FOLLOW US</span>
-      <div className="sidebarSocial">
-        <i className="sidebarIcon fa-brands fa-square-facebook"></i>
-        <i className="sidebarIcon fa-brands fa-twitter"></i>
-        <i className="sidebarIcon fa-brands fa-pinterest"></i>
-        <i className="sidebarIcon fa-brands fa-instagram"></i>
+      <div className="sidebarItem">
+        <span className="sidebarTitle">FOLLOW US</span>
+        <div className="sidebarSocial">
+          <i className="sidebarIcon fa-brands fa-square-facebook"></i>
+          <i className="sidebarIcon fa-brands fa-twitter"></i>
+          <i className="sidebarIcon fa-brands fa-pinterest"></i>
+          <i className="sidebarIcon fa-brands fa-instagram"></i>
+        </div>
       </div>
     </div>
   );
