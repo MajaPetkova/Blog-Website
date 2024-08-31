@@ -1,12 +1,10 @@
 import Post from "../post/Post";
 import "./posts.css";
 
-const Posts = () => {
+const Posts = ({posts}) => {
   return (
     <div className="posts">
-      <Post />
-      <Post />
-      <Post />
+      {posts.map((x)=>( <Post key={x._id} post={x}/>))}
     </div>
   );
 };
