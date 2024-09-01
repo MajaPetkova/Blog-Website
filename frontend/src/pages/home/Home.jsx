@@ -21,7 +21,7 @@ const Home = () => {
     <>
       <Header />
       <div className="home">
-        <Posts posts={posts} />
+        <Posts posts={posts} />  
         <Sidebar />
       </div>
     </>
