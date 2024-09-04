@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import "./topbar.css";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 const Topbar = () => {
-  const user = false;
+  const { user, dispatch } = useContext(Context);
+  const logoutHandler = () => {
+    dispatch({type: "LOGOUT"});
+  };
+
+  
   return (
     <div className="top">
       <div className="topLeft">
@@ -33,10 +40,8 @@ const Topbar = () => {
               WRITE
             </Link>
           </li>
-          <li className="topListItem">
-            <Link to="/logout" className="link">
-              {user && "LOGOUT"}
-            </Link>
+          <li className="topListItem" onClick={logoutHandler}>
+            {user && "LOGOUT"}
           </li>
         </ul>
       </div>
