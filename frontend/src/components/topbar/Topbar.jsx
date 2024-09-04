@@ -9,7 +9,7 @@ const Topbar = () => {
     dispatch({type: "LOGOUT"});
   };
 
-  
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -48,8 +48,8 @@ const Topbar = () => {
       <div className="topRight">
         {user ? (
           <img
-            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400"
-            alt=""
+            src={user.profilePicture}
+            alt="img"
             className="topImg"
           />
         ) : (
