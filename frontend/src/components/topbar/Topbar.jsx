@@ -9,7 +9,7 @@ const Topbar = () => {
     dispatch({type: "LOGOUT"});
   };
 
-
+  const PF = "http://localhost:5000/images/"
   return (
     <div className="top">
       <div className="topLeft">
@@ -49,7 +49,7 @@ const Topbar = () => {
         {user ? (
         <Link to="/settings">
           <img
-          src={user.profilePicture}
+          src={PF+ user.profilePicture}
           alt="img"
           className="topImg"
           />
