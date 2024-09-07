@@ -10,7 +10,7 @@ const path = require("path");
 
 const app = express();
 app.use(express.json());
-app.use("/images", express.static(path.join(__dirname, "/images")))
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 dotenv.config();
 
@@ -27,13 +27,14 @@ const storage = multer.diskStorage({
     cb(null, "images");
   },
   filename: (req, file, cb) => {
-    cb(null, req.body.name)
+    cb(null, req.body.name);
   },
 });
 
-const upload = multer ({storage: storage});
-app.post("/api/upload", upload.single("file"), (req, res)=>{res.status(200).json("File has been uploaded")})
-
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded");
+});
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
